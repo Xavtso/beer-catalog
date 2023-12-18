@@ -1,0 +1,126 @@
+.beerCard {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-auto-flow: row;
+  grid-template-areas:
+   "cardName cardName cardName" 
+   "image image sideInfo" 
+   "tagline tagline tagline" 
+   "btn-more btn-more btn-more";
+  height: 70%;
+  width: 90%;
+  border-radius: 1.5rem;
+  background-color: #202020;
+  -webkit-border-radius: 1.5rem;
+  -moz-border-radius: 1.5rem;
+  -ms-border-radius: 1.5rem;
+  -o-border-radius: 1.5rem;
+  box-shadow: 0px 0px 4px 1px #00000090;
+}
+
+.beerCard:hover {
+  scale: 1.02;
+  cursor: pointer;
+  background-color: #282828;
+}
+
+.btn-more {
+  grid-area: btn-more;
+  cursor: pointer;
+  width: 60%;
+  height: 50%;
+  margin: auto;
+  border-radius: 1.2rem;
+  background-color: #ed9200;
+  font-size: 1.1rem;
+  font-weight: 600;
+  -webkit-border-radius: 1.2rem;
+  -moz-border-radius: 1.2rem;
+  -ms-border-radius: 1.2rem;
+  -o-border-radius: 1.2rem;
+}
+
+.tagline {
+  grid-area: tagline;
+  margin-top: 3rem;
+  text-align: center;
+  border-radius: 0.3rem;
+  height: fit-content;
+  padding: 0.1rem;
+  box-shadow: 0px 0px 3px 0.1px #201f1f;
+  background-color: #8080804a;
+  -webkit-border-radius: 0.3rem;
+  -moz-border-radius: 0.3rem;
+  -ms-border-radius: 0.3rem;
+  -o-border-radius: 0.3rem;
+}
+
+.cardImage {
+  grid-area: image;
+  width: 70%;
+  height: 12rem;
+  display: flex;
+  justify-content: center;
+  margin-left: 15%;
+  background-color: #ed9200af;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  box-shadow: #f1c886 0px 0px 8px 1px;
+}
+.beerImage {
+  scale: 1.2;
+  filter: drop-shadow(0px 0px 1px #ffce8f58);
+  -webkit-filter: drop-shadow(0px 0px 1px #ffce8f58);
+}
+
+.sideInfo {
+  grid-area: sideInfo;
+}
+
+.cardName {
+  width: 90%;
+  margin: auto;
+  grid-area: cardName;
+  text-align: center;
+  font-size: 28px;
+  font-weight: 900;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.beerCard:last-child {
+  box-shadow: 0px 0px 0px 1px orange;
+}
+
+@media (max-width: 575px) {
+  .cardImage {
+    width: 65%;
+    height: 8rem;
+    margin-left: 15%;
+  }
+  .beerImage {
+    scale: 1.3;
+  }
+  .beerCard {
+    height: 80%;
+  }
+}
+@media (min-width: 576px) and (max-width: 900px) {
+  .cardImage {
+    height: 10rem;
+  }
+  .beerCard {
+    height: 75%;
+  }
+}
+@media (min-width: 901px) and (max-width: 1400px) {
+  .cardImage{
+    height: 10rem;
+  }
+  
+}

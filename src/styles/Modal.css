@@ -1,0 +1,67 @@
+.overflow {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.548);
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+}
+.modal {
+  border: 1px solid orange;
+  padding: 0.5rem;
+  width: 40%;
+  background-color: #202020;
+  border-radius: 1rem;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
+}
+
+.closeIcon {
+  font-size: 18px;
+  cursor: pointer;
+  width: fit-content;
+  margin-left: auto;
+  scale: 1.4;
+  margin-right: 0.5rem;
+  color: orange;
+}
+
+.closeIcon:hover {
+  color: orangered;
+}
+
+.modalTitle {
+  text-align: center;
+  width: fit-content;
+  margin-inline: auto;
+  font-size: 2rem;
+  color: rgb(160, 211, 31);
+  transform: translateY(-1rem);
+  -webkit-transform: translateY(-1rem);
+  -moz-transform: translateY(-1rem);
+  -ms-transform: translateY(-1rem);
+  -o-transform: translateY(-1rem);
+}
+.modalSubtitle {
+  text-align: center;
+  margin-inline: auto;
+  width: fit-content;
+}
+
+@media (max-width: 575px) {
+ .modal{
+    width: 70%;
+ }
+ 
+}
+
+@media (min-width: 576px) and (max-width: 850px) {
+  .modal{
+     width: 80%;
+  }
+  
+}

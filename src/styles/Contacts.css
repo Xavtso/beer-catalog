@@ -1,0 +1,131 @@
+.contactsBody{
+    height: 100vh;
+}
+.contactTitle{
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 2rem;
+    letter-spacing: 2px;
+}
+.contactForm{
+    margin: 2rem auto;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem 0;
+}
+
+
+.formLabel{
+    color: orange;
+    margin-bottom: 5px;
+    text-align: left;
+    font-size: 1.15rem;
+    width: 50%;
+}
+.checkLabel{
+    display: flex;
+    align-items: center;
+    padding: 0.3rem 0.5rem;
+    width: 50%;
+    justify-content: center;
+    color: #d24040;
+}
+
+.formInput{
+    width: 50%;
+}
+
+.formArea,.formInput{
+    width: 48%;
+     border-radius: 0.5rem;
+    -webkit-border-radius: 0.5rem;
+    -moz-border-radius: 0.5rem;
+    -ms-border-radius: 0.5rem;
+    -o-border-radius: 0.5rem;
+    border: none;
+    outline: none;
+    box-shadow:0px 0px 4px 1px #00000085 ;
+    background-color: #302f2f;
+    caret-color: #fff;
+    color: #fff;
+    padding: 0.2rem 0.5rem;
+}
+
+.formArea{
+    height: 4rem;
+}
+
+.formButton{
+    width: 30%;
+    height: 2rem;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    background-color: orange;
+    color: #222;
+    font-weight: 600;
+    border-radius: 0.8rem;
+    -webkit-border-radius: 0.8rem;
+    -moz-border-radius: 0.8rem;
+    -ms-border-radius: 0.8rem;
+    -o-border-radius: 0.8rem;
+}
+
+
+
+.checkInput{
+    cursor: pointer;
+    background-color: orange;
+}
+
+.checkInput:checked {
+  background-color: orange;
+}
+
+.agreed{
+    color: green;
+}
+
+.disabled{
+    cursor: not-allowed;
+    background-color: #302f2f;
+    color: darkgray;
+}
+
+.sendAnim{
+    animation: sendAnimation 3s   ease-in-out;
+    -webkit-animation: sendAnimation 3s   ease-in-out;
+}
+
+@keyframes sendAnimation {
+    from{
+        width: 30%;
+        background-color: orange;
+    }to{
+        width: 5%;
+        border-radius: 50%;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+        background-color: green;
+        color: #fff;
+}
+
+}
+
+@media (max-width: 575px) {
+ .contactForm{
+    width: 100%;
+ }
+
+}
+
+@media (min-width: 576px) and (max-width: 770px) {
+   .contactForm{
+    width: 80%;
+   }
+}

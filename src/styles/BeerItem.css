@@ -1,0 +1,94 @@
+/* .beerItem{} */
+
+.titleBlock {
+  text-align: center;
+}
+.beerName {
+  margin-bottom: -1rem;
+}
+
+.firstBrewed {
+  margin-bottom: 2rem;
+  color: #f9d99d;
+}
+.imageBlock {
+  height: fit-content;
+  width: 30%;
+  text-align: center;
+}
+.imageInfo b {
+  color: orange;
+}
+
+.beerItem-image {
+  width: 25%;
+  object-fit: cover;
+  filter: drop-shadow(-1px 1px 4px rgba(255, 166, 0, 0.762));
+  -webkit-filter: drop-shadow(-1px 1px 4px rgba(255, 166, 0, 0.762));
+}
+.kegImage {
+  width: 50%;
+}
+
+.imageInfo {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.flexSection {
+  display: flex;
+  gap: 2rem;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.infoBlock {
+  width: 50%;
+  /*border: 1px solid;
+  */border-radius:0.5rem ;
+  padding: 0.5rem 1rem;
+  -webkit-border-radius:0.5rem ;
+  -moz-border-radius:0.5rem ;
+  -ms-border-radius:0.5rem ;
+  -o-border-radius:0.5rem ;
+  background-color: #252525;
+  box-shadow: 0px 0px 3px 1px #000000;
+}
+
+.infoBlock h3 {
+  color: orange;
+}
+
+/* .description {
+}
+.tips {
+}
+.foodPairs {
+} */
+
+
+@media (max-width: 575px) {
+   .flexSection{
+    flex-direction: column;
+   }
+   .imageBlock{
+    width: 90%;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+   }
+   .imageInfo{
+    gap: 1rem;
+   }
+   .infoBlock{
+    width: 80%;
+   }
+
+}
+
+@media (min-width: 576px) and (max-width: 770px) {
+   .beerItem-image{
+    width: 40%;
+   }
+}
