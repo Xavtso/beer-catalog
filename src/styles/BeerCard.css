@@ -111,8 +111,9 @@
 
 @media (max-width: 575px) {
   .cardImage {
-    width: 40%;
-    margin-left: -20%;
+    width: 60%;
+    height: 65%;
+    margin-left: 15%;
   }
   .beerImage {
     scale: 1.3;
