@@ -1,45 +1,133 @@
 .pageTitle{
-    text-align: center;
-    font-size: 3rem;
-    width: fit-content;
-    margin-inline:auto ;
-    translate: 0rem 5rem;
+    text-align: left;
+  color: #000;
+font-family: Helvetica;
+font-size: 2.5rem;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+text-transform: uppercase;
+    padding: 0 2rem;
+    /* translate: 0rem 5rem; */
+}
+.intro{
+    display: flex;
+    gap: 4rem;
+    padding: 0.5rem;
+    align-items: center;
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+    color: #000;
+    /* float: left; */
+    justify-content: space-evenly;
+}
+
+.intro h1 {
+    font-family: Helvetica;
+font-size: 3.125rem;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+text-transform: uppercase;
+}
+
+.introImage{
+    float: right;
+
+}
+
+.introText{
+    width: 50%;
+}
+.introText p{
+    color: #000;
+width: 80%;
+font-family: Helvetica;
+font-size: 1.25rem;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
 }
 
 .catalog{
     display: grid;
     grid-template-columns: repeat(3,1fr);
-    gap: 1rem;
+    gap: 2rem 0.5rem;
     place-items: center;
+    padding: 1rem;
 }
 
 
 
 @media (max-width: 575px) {
+    .intro{
+        flex-direction: column-reverse;
+        justify-content: center;
+        gap: 0;
+    }
+    .introImage{
+        width: 100%;
+        object-fit: contain;
+    }
+    .introText{
+        width: 100%;
+        text-align: left;
+    }
+    .introText p{
+        width: 95%;
+        
+    }
+    
     .catalog{
         grid-template-columns: repeat(1,1fr);
-        gap: 0;
+        gap: 2rem;
+        padding: 0.5rem;
     }
     .pageTitle{
-        font-size: 2rem;
-        transform: translateY(-3rem);
-        -webkit-transform: translateY(-3rem);
-        -moz-transform: translateY(-3rem);
-        -ms-transform: translateY(-3rem);
-        -o-transform: translateY(-3rem);
-}
+        text-align: center;
+        font-size: 1.5rem;
+        
+    }
 }
 
-@media (min-width: 576px) and (max-width: 770px) {
+@media (min-width: 576px) and (max-width: 800px) {
+
+.intro{
+    align-items: center;
+}
+
+    .introImage{
+        width: 80%;
+        object-fit: contain;
+    }
+    .introText{
+        width: 100%;
+        text-align: left;
+        /* font-size: medium; */
+        font-size: 14px;
+
+    }
+    .introText h1 {
+        font-size: 28px;
+    }
+
+
+    .introText p{
+        width: 95%;
+        font-size: 17px;
+        
+    }
+    
     .catalog{
         grid-template-columns: repeat(2,1fr);
-        gap: 0;
+        gap: 0.5rem;
     }
-
+    
     .pageTitle{
         font-size: 2rem;
     }
 }
+
 
 @media (min-width: 901px) and (max-width: 1400px) {
   .catalog{

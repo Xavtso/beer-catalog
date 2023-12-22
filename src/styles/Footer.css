@@ -1,50 +1,35 @@
 footer{
-    /*border: 1px solid;
-    */display: flex;
+    display: flex;
     align-items: center;
     justify-content: space-evenly;
     gap: 2rem;
-    height: 18rem;
-    background-color: #101010;
+    height: 6rem;
+    background-color: #363636;
     margin-top: 4rem;
-    border-radius:0.8rem ;
-    -webkit-border-radius:0.8rem ;
-    -moz-border-radius:0.8rem ;
-    -ms-border-radius:0.8rem ;
-    -o-border-radius:0.8rem ;
-    box-shadow: #222 0px 0px 5px 2px;
+    box-shadow: #a9a9a9 0px 0px 5px 1px;
 }
 
-a{
-    color: orange;
-    font-weight: 600;
-    font-size: 18px;
-    text-decoration: none;
-}
-a:hover{
-    transition: 5s;
-    text-decoration: underline;
-    -webkit-transition: 5s;
-    -moz-transition: 5s;
-    -ms-transition: 5s;
-    -o-transition: 5s;
-}
 
 .footer-nav,.footer-info{
     display: flex;
     height: 70%;
-    padding:0.5rem ;
-    flex-direction: column;
+    gap:1rem ;
     justify-content: center;
-    align-items: left;
+    align-items: center;
     justify-content: space-evenly;
+    color: #ffffff;
 }
 .footer-info{
     align-items:center ;
+    color: #a9a9a9;
 }
 .footer-info h2{
     color: orange;
     
+}
+
+.footer-nav a{
+    color: #ffffff;
 }
 
 .footerLogo{
@@ -55,8 +40,11 @@ a:hover{
 
 @media (max-width: 575px) {
   footer{
-    flex-direction: column;
-    height: fit-content;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    /* height: fit-content; */
+
   }
   .footerLogo{
     width: 50%;

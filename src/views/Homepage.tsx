@@ -3,6 +3,7 @@ import "../styles/Homepage.css";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import Beer from "../types/Beer";
+import intro from '../assets/image 2header.jpg'
 
 export default function Homepage() {
     const [beer,setBeer] = useState<Beer[]>([])
@@ -17,9 +18,24 @@ export default function Homepage() {
 
   return (
     <div className="main">
-      <h2 className="pageTitle">Beer's Catalog</h2>
-      <div className="catalog">
-        {beer.map((beerItem,index) => (
+      <div className="intro">
+        <div className="introText">
+          <h1>Modern Ukrainian brewery</h1>
+          <p>
+            We are sure that you will find something close to you, no matter
+            what you like - a classic blanche or a mango milkshake, a strong
+            stout or a light berliner. Even if you like sports, we have
+            something for you.
+          </p>
+        </div>
+        <div className="introImage">
+          <img src={intro} alt="introImage" className="introImage" />
+        </div>
+      </div>
+
+      <h2 className="pageTitle">Our Products</h2>
+      <div id="products" className="catalog">
+        {beer.map((beerItem, index) => (
           <BeerCard
             key={beerItem.id}
             beer={beerItem}

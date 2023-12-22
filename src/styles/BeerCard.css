@@ -1,55 +1,62 @@
 .beerCard {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
   grid-auto-flow: row;
-  grid-template-areas:
-   "cardName cardName cardName" 
-   "image image sideInfo" 
-   "tagline tagline tagline" 
-   "btn-more btn-more btn-more";
-  height: 70%;
-  width: 90%;
-  border-radius: 1.5rem;
-  background-color: #202020;
-  -webkit-border-radius: 1.5rem;
-  -moz-border-radius: 1.5rem;
-  -ms-border-radius: 1.5rem;
-  -o-border-radius: 1.5rem;
-  box-shadow: 0px 0px 4px 1px #00000090;
+  grid-template-areas: 
+     "image sideInfo"  
+     "image sideInfo";
+  
+  gap: 1rem;
+  width: 95%;
+  place-items: center;
+  border-radius: 0.5rem;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
+  border: 1px solid #919191;
+  height: 70vh;
+  padding: 0.5rem;
+  
+  /* box-shadow: 0px 0px 4px 1px #00000090; */
 }
 
 .beerCard:hover {
   scale: 1.02;
   cursor: pointer;
-  background-color: #282828;
+  background-color: #ffffff;
 }
 
 .btn-more {
   grid-area: btn-more;
   cursor: pointer;
-  width: 60%;
-  height: 50%;
+  text-align: left;
+  width: 100%;
+  height: 2rem;
   margin: auto;
-  border-radius: 1.2rem;
-  background-color: #ed9200;
+  border: none;
+  border-radius: 0.2rem;
+  background-color: #F3E1FF;
   font-size: 1.1rem;
-  font-weight: 600;
-  -webkit-border-radius: 1.2rem;
-  -moz-border-radius: 1.2rem;
-  -ms-border-radius: 1.2rem;
-  -o-border-radius: 1.2rem;
+  font-weight: 400;
+  padding: 0 1rem;
+  -webkit-border-radius: 0.2rem;
+  -moz-border-radius: 0.2rem;
+  -ms-border-radius: 0.2rem;
+  -o-border-radius: 0.2rem;
+}
+.btn-more:hover{
+  background-color: #d9a5fc;
 }
 
 .tagline {
   grid-area: tagline;
-  margin-top: 3rem;
-  text-align: center;
+  /* margin-top: 3rem; */
+  text-align: left;
   border-radius: 0.3rem;
   height: fit-content;
   padding: 0.1rem;
-  box-shadow: 0px 0px 3px 0.1px #201f1f;
-  background-color: #8080804a;
   -webkit-border-radius: 0.3rem;
   -moz-border-radius: 0.3rem;
   -ms-border-radius: 0.3rem;
@@ -58,39 +65,44 @@
 
 .cardImage {
   grid-area: image;
-  width: 70%;
-  height: 12rem;
+  height: 100%;
   display: flex;
+  min-width: 5rem;
   justify-content: center;
-  margin-left: 15%;
-  background-color: #ed9200af;
-  border-radius: 50%;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  -o-border-radius: 50%;
-  box-shadow: #f1c886 0px 0px 8px 1px;
 }
 .beerImage {
-  scale: 1.2;
+  scale: 1;
+  width: 100%;
+  object-fit: contain;
   filter: drop-shadow(0px 0px 1px #ffce8f58);
   -webkit-filter: drop-shadow(0px 0px 1px #ffce8f58);
 }
 
 .sideInfo {
   grid-area: sideInfo;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  gap: 1rem;
+  justify-content: center;
+  padding: 0 0.2rem;
 }
 
+.infoItems{
+  display: flex;
+  text-align: left;
+  gap: 0.2rem;
+  font-size: 14px;
+}
 .cardName {
-  width: 90%;
-  margin: auto;
+  /* border: 1px solid #222; */
   grid-area: cardName;
-  text-align: center;
-  font-size: 28px;
-  font-weight: 900;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  text-align: left;
+  font-family: Helvetica Medium;
+  font-size: 26px;
+  font-weight: 500;
+  width: 100%;
+
 }
 
 .beerCard:last-child {
@@ -99,28 +111,53 @@
 
 @media (max-width: 575px) {
   .cardImage {
-    width: 65%;
-    height: 8rem;
-    margin-left: 15%;
+    width: 40%;
+    margin-left: -20%;
   }
   .beerImage {
     scale: 1.3;
   }
+ 
   .beerCard {
-    height: 80%;
+    height: 70vh;
+    gap: 0;
+    place-items: none;
+  }
+  .cardName{
+    font-size: 22px;
+  }
+  .sideInfo{
+    width: 100%;
+    
+  }
+  .infoItems{
+    font-size: 13px;
+    width: 100%;
+    /* gap: 0.1px; */
   }
 }
 @media (min-width: 576px) and (max-width: 900px) {
-  .cardImage {
-    height: 10rem;
+ .beerCard {
+    height: 70vh;
+    gap: 0.5rem;
+    place-items: none;
   }
-  .beerCard {
-    height: 75%;
+  .cardName{
+    font-size: 28px;
+  }
+  .sideInfo{
+    width: 100%;
+    
+  }
+  .infoItems{
+    font-size: 13px;
+    width: 100%;
+    /* gap: 0.1px; */
+  }
+  .cardImage{
+    scale: 0.9;
   }
 }
 @media (min-width: 901px) and (max-width: 1400px) {
-  .cardImage{
-    height: 10rem;
-  }
-  
+ 
 }

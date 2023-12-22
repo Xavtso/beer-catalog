@@ -1,22 +1,17 @@
 import '../styles/Footer.css';
 import beerLogo from '../assets/beer-logo.png'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export default function Footer() {
     return (
       <footer>
         <div className="footer-info">
-          <h2>Beer Catalog</h2>
-          <p>
-            Developed by: <a href="https://github.com/Xavtso">@Xavtso</a>
-          </p>
+          © 2023 Underwood Brwr, Inc. All rights reserved.
         </div>
-        
-          <img src={beerLogo} alt='beer-logo' className='footerLogo'/>
 
         <div className="footer-nav">
-          <a href="/">Homepage</a>
-          <a href="/contacts">Contacts</a>
-          <a href="https://t.me/v_havrona">Contact Developer</a>
+          <a href="/">Privacy Policy</a>
+          <a href="/">Terms of delivery</a>
         </div>
       </footer>
     );

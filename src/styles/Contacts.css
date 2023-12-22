@@ -1,77 +1,83 @@
 .contactsBody{
-    height: 100vh;
+    height: 70%;
+    width: 80%;
+    background-color: #ffffff;
+    padding: 0.5rem;
+}
+
+.contactsContent{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+
+.contactsImage{
+    height: 80%;
+}
+
+.contactsBody h4{
+    color: #414141;
 }
 .contactTitle{
-    text-align: center;
-    margin-top: 2rem;
+    margin: 0;
+    font-weight: 600;
+    font: inherit;
+    text-align: left;
     font-size: 2rem;
-    letter-spacing: 2px;
 }
 .contactForm{
-    margin: 2rem auto;
-    width: 50%;
+    height: 80%;
+    width: 40%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    justify-content:center;
     padding: 0.5rem 0;
 }
 
 
-.formLabel{
-    color: orange;
-    margin-bottom: 5px;
-    text-align: left;
-    font-size: 1.15rem;
-    width: 50%;
-}
 .checkLabel{
     display: flex;
     align-items: center;
     padding: 0.3rem 0.5rem;
-    width: 50%;
+    width: 100%;
     justify-content: center;
     color: #d24040;
 }
 
 .formInput{
-    width: 50%;
-}
-
-.formArea,.formInput{
-    width: 48%;
-     border-radius: 0.5rem;
-    -webkit-border-radius: 0.5rem;
-    -moz-border-radius: 0.5rem;
-    -ms-border-radius: 0.5rem;
-    -o-border-radius: 0.5rem;
+    width: 90%;
+    margin:0.5rem auto ;
     border: none;
+    border-bottom: #414141 1.5px solid;
     outline: none;
-    box-shadow:0px 0px 4px 1px #00000085 ;
-    background-color: #302f2f;
-    caret-color: #fff;
-    color: #fff;
+   font-size: 16px;
     padding: 0.2rem 0.5rem;
 }
 
-.formArea{
-    height: 4rem;
+.closeForm{
+    width: fit-content;
+    margin-right: 2rem;
+    scale: 2;
+    cursor: pointer;
+    margin-left:auto ;
 }
-
 .formButton{
-    width: 30%;
-    height: 2rem;
+    width: 80%;
+    height: 3rem;
+    padding: 0.5rem;
     outline: none;
     border: none;
     cursor: pointer;
-    background-color: orange;
-    color: #222;
+    background-color: #363636;
+    color: #ffffff;
     font-weight: 600;
-    border-radius: 0.8rem;
-    -webkit-border-radius: 0.8rem;
-    -moz-border-radius: 0.8rem;
-    -ms-border-radius: 0.8rem;
-    -o-border-radius: 0.8rem;
+    margin: 0 auto;
+    border-radius: 0.1rem;
+    -webkit-border-radius: 0.1rem;
+    -moz-border-radius: 0.1rem;
+    -ms-border-radius: 0.1rem;
+    -o-border-radius: 0.1rem;
 }
 
 
@@ -91,7 +97,7 @@
 
 .disabled{
     cursor: not-allowed;
-    background-color: #302f2f;
+    background-color: gray;
     color: darkgray;
 }
 
@@ -102,10 +108,10 @@
 
 @keyframes sendAnimation {
     from{
-        width: 30%;
-        background-color: orange;
+        width: 80%;
+        
     }to{
-        width: 5%;
+        width: 2rem;
         border-radius: 50%;
         -webkit-border-radius: 50%;
         -moz-border-radius: 50%;
